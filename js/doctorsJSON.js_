@@ -1,0 +1,92 @@
+var doctorsJSON = [
+	{
+		"lastname": "Балашов",
+		"name": "Алексей",
+		"patronimic": "Владимирович",
+		"work_position": "Уролог",
+		"address": "г.Москва, проспект Андропова, дом 56, кабинет 45",
+		"href": "/doctor/",
+		"pic": "/upload/userpic/medium.jpg"
+	},
+	{
+		"lastname": "Балашов",
+		"name": "Алексей",
+		"patronimic": "Владимирович",
+		"work_position": "Уролог",
+		"address": "г.Москва, ул.Глаголева, дом 6, кабинет 45",
+		"href": "/doctor/",
+		"pic": "/upload/userpic/medium.jpg"
+	},
+	{
+		"lastname": "Балашов",
+		"name": "Алексей",
+		"patronimic": "Владимирович",
+		"work_position": "Уролог",
+		"address": "г.Москва, проспект Вернадского, дом 7, кабинет 45",
+		"href": "/doctor/",
+		"pic": "/upload/userpic/medium.jpg"
+	},
+	{
+		"lastname": "Балашов",
+		"name": "Алексей",
+		"patronimic": "Владимирович",
+		"work_position": "Уролог",
+		"address": "г.Москва, Рязанский проспект, дом 9, кабинет 45",
+		"href": "/doctor/",
+		"pic": "/upload/userpic/medium.jpg"
+	},
+	{
+		"lastname": "Балашов",
+		"name": "Алексей",
+		"patronimic": "Владимирович",
+		"work_position": "Уролог",
+		"address": "г.Москва, ул. 8 марта, дом 1, кабинет 45",
+		"href": "/doctor/",
+		"pic": "/upload/userpic/medium.jpg"
+	},
+	{
+		"lastname": "Балашов",
+		"name": "Алексей",
+		"patronimic": "Владимирович",
+		"work_position": "Уролог",
+		"address": "г.Москва, ул Свободы, дом 5, кабинет 45",
+		"href": "/doctor/",
+		"pic": "/upload/userpic/medium.jpg"
+	},
+	{
+		"lastname": "Балашов",
+		"name": "Алексей",
+		"patronimic": "Владимирович",
+		"work_position": "Уролог",
+		"address": "г.Москва, ул. Веселая, дом 2, кабинет 45",
+		"href": "/doctor/",
+		"pic": "/upload/userpic/medium.jpg"
+	},
+	{
+		"lastname": "Балашов",
+		"name": "Алексей",
+		"patronimic": "Владимирович",
+		"work_position": "Уролог",
+		"address": "г.Москва, ул. Солнечная, дом 5, кабинет 45",
+		"href": "/doctor/",
+		"pic": "/upload/userpic/medium.jpg"
+	},
+	{
+		"lastname": "Балашов",
+		"name": "Алексей",
+		"patronimic": "Владимирович",
+		"work_position": "Уролог",
+		"address": "г.Москва, Красная Площадь, дом 1, кабинет 45",
+		"href": "/doctor/",
+		"pic": "/upload/userpic/medium.jpg"
+	},
+	{
+		"lastname": "Балашов",
+		"name": "Алексей",
+		"patronimic": "Владимирович",
+		"work_position": "Уролог",
+		"address": "г.Москва, ул. Ильинка, дом 4, кабинет 45",
+		"href": "/doctor/",
+		"pic": "/upload/userpic/medium.jpg"
+	}
+];
