@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="/css/styles.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+<script src="/js/html5shiv.js" type="text/javascript"></script>
+<script src="/js/jscript.js" type="text/javascript"></script>
+<title>Доктор-локатор</title>
+</head>
+
+<body>
+<div class="i-page-content">
+	
+	<header class="b-header">
+		<div class="b-logo">
+			<img src="/images/logo.gif" width="71" height="72" alt="Мужское здоровье">
+		</div>
+		
+		<div class="b-top-heading">
+			<span class="b-top-heading__img i-image"><span class="i-image__text">Доктор-локатор</span></span>
+		</div>
+		
+		<div class="i-clearfix"></div>
+		
+		<div class="b-sign-in">
+			<a href="">Регистрация для врачей</a>
+		</div>
+	</header>
+	
+	<div class="b-page-space">
+		<div class="b-locator" id="Locator">
+			<h1 title="Найти доктора" class="b-locator__heading"><img src="/images/headers/find-doctor.png" width="289" height="56" alt="Найти доктора"></h1>
+			<div class="b-locator__hint-about">Пара слов о сервисе объясняющее  для чего, и кому он может пригодиться принципы работы и все это в двух - трех сточках простого и понятного текста</div>
+			
+			<div class="i-clearfix"></div>
+			
+			<div class="b-locator__service">
+				
+				<div class="b-locator__my-location">
+					<div class="b-locator__my-location__form">
+						<form action="" method="get" class="b-search-form">
+							<div class="b-form-field">
+								<input type="text" name="address" value="" data-placeholder="Уточните свой адрес" class="b-input-text" required>
+							</div>
+							<div class="b-form-submit">
+								<button class="b-button b-button_type-submit b-button_theme-1-M-find" type="submit"></button>
+							</div>
+						</form>
+					</div>
+					<!--
+					<div class="b-locator__my-location__link">
+						<a href="">Определить мое местоположение</a>
+					</div>
+					-->
+					<div class="i-clearfix"></div>
+				</div>
+				
+				<div class="b-locator__map">
+					<div class="b-locator__map__doctors">
+						<div class="b-locator__map__doctors__item b-map-point" style="top: 220px; left: 180px;">
+							<div class="b-map-point__content"><img src="/upload/userpic/small.jpg" width="28" height="28" alt="" class="b-map-point__pic"></div>
+						</div>
+						<div class="b-locator__map__doctors__item b-map-point" style="top: 100px; left: 320px;">
+							<div class="b-map-point__content"><img src="/upload/userpic/small.jpg" width="28" height="28" alt="" class="b-map-point__pic"></div>
+						</div>
+						<div class="b-locator__map__doctors__item b-map-point" style="top: 115px; left: 800px;">
+							<div class="b-map-point__content"><img src="/upload/userpic/small.jpg" width="28" height="28" alt="" class="b-map-point__pic"></div>
+						</div>
+						<div class="b-locator__map__doctors__item b-map-point" style="top: 340px; left: 390px;">
+							<div class="b-map-point__content"><img src="/upload/userpic/small.jpg" width="28" height="28" alt="" class="b-map-point__pic"></div>
+						</div>
+						
+						<div class="b-locator__map__doctors__item b-map-infopoint" style="top: 280px; left: 490px;">
+							<div class="b-map-infopoint__content">
+								<div class="b-map-infopoint__person">
+									<div class="b-map-infopoint__person__pic"><a href="/doctor/"><img src="/upload/userpic/medium.jpg" width="65" height="65" alt="Балашов Алексей Владимирович" class="b-map-infopoint__person__pic__img"></a></div>
+									<div class="b-map-infopoint__person__info">
+										<div class="b-map-infopoint__name">
+											<a href="/doctor/">Балашов Алексей Владимирович</a>
+										</div>
+										<div class="b-map-infopoint__occupation">Уролог</div>
+									</div>
+									<div class="i-clearfix"></div>
+								</div>
+								<div class="b-map-infopoint__address">
+									<div class="b-map-infopoint__address__heading">Адрес:</div>
+									3-й Сталелетейный проезд, дом 56, кабинет 45
+								</div>
+								<div class="b-map-infopoint__links">
+									<a href="/doctor/" class="b-map-infopoint__more">Подробнее</a>
+									<button class="b-button b-button_theme-1-S-sign"></button>
+								</div>						
+								<div class="b-map-infopoint__pointer"></div>
+							</div>
+						</div>
+					</div>
+					<img src="/upload/location-map.jpg" width="950" height="430" alt="">
+					<div class="i-decor-block-shadow"></div>
+				</div>
+			
+				<div class="b-locator__result">
+					<div class="b-locator__result__tabs b-tabs">
+						<div class="b-tabs__item b-tabs__item__type-active" id="tab-locator-result">
+							<span class="b-tabs__item__text">Врачи поблизости</span>
+						</div>
+						<div class="b-tabs__item" id="tab-locator-fav">
+							<span class="b-tabs__item__text">Избранное</span>
+						</div>
+						<div class="i-clearfix"></div>
+					</div>
+					<div class="b-locator__result__content">
+						<div class="b-locator__result__block b-locator__result__block__type-active" id="block-locator-result">
+						
+							<div class="b-locator__result__item b-doctor-vcard">
+								<div class="b-doctor-vcard__pic">
+									<a href="/doctor/"><img src="/upload/userpic/big.jpg" width="110" height="110" alt="Балашов Алексей Владимирович" class="b-doctor-vcard__pic__img"></a>
+									<div class="b-doctor-vcard__more"><a href="/doctor/" class="b-doctor-vcard__more__link">Подробнее</a></div>
+								</div>
+								<div class="b-doctor-vcard__info">
+									<div class="b-doctor-vcard__name">
+										<a href="/doctor/">Балашов Алексей Владимирович</a>
+									</div>
+									<div class="b-doctor-vcard__occupation">Уролог</div>
+									<div class="b-doctor-vcard__text">
+										<div class="b-doctor-vcard__experience">Стаж 5 лет</div>
+										<div class="b-doctor-vcard__address">3-й Сталелетейный проезд, дом 56, кабинет 45</div>
+									</div>
+									<div class="b-doctor-vcard__sign">
+										<button class="b-button b-button_theme-1-S-sign"></button>
+									</div>
+								</div>
+								<div class="i-clearfix"></div>
+							</div>
+							
+							<div class="b-locator__result__item b-doctor-vcard">
+								<div class="b-doctor-vcard__pic">
+									<a href="/doctor/"><img src="/upload/userpic/big.jpg" width="110" height="110" alt="Балашов Алексей Владимирович" class="b-doctor-vcard__pic__img"></a>
+									<div class="b-doctor-vcard__more"><a href="/doctor/" class="b-doctor-vcard__more__link">Подробнее</a></div>
+								</div>
+								<div class="b-doctor-vcard__info">
+									<div class="b-doctor-vcard__name">
+										<a href="/doctor/">Балашов Алексей Владимирович</a>
+									</div>
+									<div class="b-doctor-vcard__occupation">Уролог</div>
+									<div class="b-doctor-vcard__text">
+										<div class="b-doctor-vcard__experience">Стаж 5 лет</div>
+										<div class="b-doctor-vcard__address">3-й Сталелетейный проезд, дом 56, кабинет 45</div>
+									</div>
+									<div class="b-doctor-vcard__sign">
+										<button class="b-button b-button_theme-1-S-sign"></button>
+									</div>
+								</div>
+								<div class="i-clearfix"></div>
+							</div>
+						
+							<div class="b-locator__result__item b-doctor-vcard">
+								<div class="b-doctor-vcard__pic">
+									<a href="/doctor/"><img src="/upload/userpic/big.jpg" width="110" height="110" alt="Балашов Алексей Владимирович" class="b-doctor-vcard__pic__img"></a>
+									<div class="b-doctor-vcard__more"><a href="/doctor/" class="b-doctor-vcard__more__link">Подробнее</a></div>
+								</div>
+								<div class="b-doctor-vcard__info">
+									<div class="b-doctor-vcard__name">
+										<a href="/doctor/">Балашов Алексей Владимирович</a>
+									</div>
+									<div class="b-doctor-vcard__occupation">Уролог</div>
+									<div class="b-doctor-vcard__text">
+										<div class="b-doctor-vcard__experience">Стаж 5 лет</div>
+										<div class="b-doctor-vcard__address">3-й Сталелетейный проезд, дом 56, кабинет 45</div>
+									</div>
+									<div class="b-doctor-vcard__sign">
+										<button class="b-button b-button_theme-1-S-sign"></button>
+									</div>
+								</div>
+								<div class="i-clearfix"></div>
+							</div>
+							
+							<div class="b-locator__result__item b-doctor-vcard">
+								<div class="b-doctor-vcard__pic">
+									<a href="/doctor/"><img src="/upload/userpic/big.jpg" width="110" height="110" alt="Балашов Алексей Владимирович" class="b-doctor-vcard__pic__img"></a>
+									<div class="b-doctor-vcard__more"><a href="/doctor/" class="b-doctor-vcard__more__link">Подробнее</a></div>
+								</div>
+								<div class="b-doctor-vcard__info">
+									<div class="b-doctor-vcard__name">
+										<a href="/doctor/">Балашов Алексей Владимирович</a>
+									</div>
+									<div class="b-doctor-vcard__occupation">Уролог</div>
+									<div class="b-doctor-vcard__text">
+										<div class="b-doctor-vcard__experience">Стаж 5 лет</div>
+										<div class="b-doctor-vcard__address">3-й Сталелетейный проезд, дом 56, кабинет 45</div>
+									</div>
+									<div class="b-doctor-vcard__sign">
+										<button class="b-button b-button_theme-1-S-sign"></button>
+									</div>
+								</div>
+								<div class="i-clearfix"></div>
+							</div>
+						
+							<div class="b-locator__result__item b-doctor-vcard">
+								<div class="b-doctor-vcard__pic">
+									<a href="/doctor/"><img src="/upload/userpic/big.jpg" width="110" height="110" alt="Балашов Алексей Владимирович" class="b-doctor-vcard__pic__img"></a>
+									<div class="b-doctor-vcard__more"><a href="/doctor/" class="b-doctor-vcard__more__link">Подробнее</a></div>
+								</div>
+								<div class="b-doctor-vcard__info">
+									<div class="b-doctor-vcard__name">
+										<a href="/doctor/">Балашов Алексей Владимирович</a>
+									</div>
+									<div class="b-doctor-vcard__occupation">Уролог</div>
+									<div class="b-doctor-vcard__text">
+										<div class="b-doctor-vcard__experience">Стаж 5 лет</div>
+										<div class="b-doctor-vcard__address">3-й Сталелетейный проезд, дом 56, кабинет 45</div>
+									</div>
+									<div class="b-doctor-vcard__sign">
+										<button class="b-button b-button_theme-1-S-sign"></button>
+									</div>
+								</div>
+								<div class="i-clearfix"></div>
+							</div>
+							
+							<div class="b-locator__result__item b-doctor-vcard">
+								<div class="b-doctor-vcard__pic">
+									<a href="/doctor/"><img src="/upload/userpic/big.jpg" width="110" height="110" alt="Балашов Алексей Владимирович" class="b-doctor-vcard__pic__img"></a>
+									<div class="b-doctor-vcard__more"><a href="/doctor/" class="b-doctor-vcard__more__link">Подробнее</a></div>
+								</div>
+								<div class="b-doctor-vcard__info">
+									<div class="b-doctor-vcard__name">
+										<a href="/doctor/">Балашов Алексей Владимирович</a>
+									</div>
+									<div class="b-doctor-vcard__occupation">Уролог</div>
+									<div class="b-doctor-vcard__text">
+										<div class="b-doctor-vcard__experience">Стаж 5 лет</div>
+										<div class="b-doctor-vcard__address">3-й Сталелетейный проезд, дом 56, кабинет 45</div>
+									</div>
+									<div class="b-doctor-vcard__sign">
+										<button class="b-button b-button_theme-1-S-sign"></button>
+									</div>
+								</div>
+								<div class="i-clearfix"></div>
+							</div>
+						
+							<div class="i-clearfix"></div>
+							
+							<div class="b-get-more"><a href="">Показать еще</a></div>
+							
+						</div>
+						
+						<div class="b-locator__result__block" id="block-locator-fav">
+						
+							<div class="b-locator__result__item b-doctor-vcard">
+								<div class="b-doctor-vcard__pic">
+									<a href="/doctor/"><img src="/upload/userpic/big.jpg" width="110" height="110" alt="Балашов Алексей Владимирович" class="b-doctor-vcard__pic__img"></a>
+									<div class="b-doctor-vcard__more"><a href="/doctor/" class="b-doctor-vcard__more__link">Подробнее</a></div>
+								</div>
+								<div class="b-doctor-vcard__info">
+									<div class="b-doctor-vcard__name">
+										<a href="/doctor/">Балашов Алексей Владимирович</a>
+									</div>
+									<div class="b-doctor-vcard__occupation">Уролог</div>
+									<div class="b-doctor-vcard__text">
+										<div class="b-doctor-vcard__experience">Стаж 5 лет</div>
+										<div class="b-doctor-vcard__address">3-й Сталелетейный проезд, дом 56, кабинет 45</div>
+									</div>
+									<div class="b-doctor-vcard__sign">
+										<button class="b-button b-button_theme-1-S-sign"></button>
+									</div>
+								</div>
+								<div class="i-clearfix"></div>
+							</div>
+							
+							<div class="b-locator__result__item b-doctor-vcard">
+								<div class="b-doctor-vcard__pic">
+									<a href="/doctor/"><img src="/upload/userpic/big.jpg" width="110" height="110" alt="Балашов Алексей Владимирович" class="b-doctor-vcard__pic__img"></a>
+									<div class="b-doctor-vcard__more"><a href="/doctor/" class="b-doctor-vcard__more__link">Подробнее</a></div>
+								</div>
+								<div class="b-doctor-vcard__info">
+									<div class="b-doctor-vcard__name">
+										<a href="/doctor/">Балашов Алексей Владимирович</a>
+									</div>
+									<div class="b-doctor-vcard__occupation">Уролог</div>
+									<div class="b-doctor-vcard__text">
+										<div class="b-doctor-vcard__experience">Стаж 5 лет</div>
+										<div class="b-doctor-vcard__address">3-й Сталелетейный проезд, дом 56, кабинет 45</div>
+									</div>
+									<div class="b-doctor-vcard__sign">
+										<button class="b-button b-button_theme-1-S-sign"></button>
+									</div>
+								</div>
+								<div class="i-clearfix"></div>
+							</div>
+						
+							<div class="b-locator__result__item b-doctor-vcard">
+								<div class="b-doctor-vcard__pic">
+									<a href="/doctor/"><img src="/upload/userpic/big.jpg" width="110" height="110" alt="Балашов Алексей Владимирович" class="b-doctor-vcard__pic__img"></a>
+									<div class="b-doctor-vcard__more"><a href="/doctor/" class="b-doctor-vcard__more__link">Подробнее</a></div>
+								</div>
+								<div class="b-doctor-vcard__info">
+									<div class="b-doctor-vcard__name">
+										<a href="/doctor/">Балашов Алексей Владимирович</a>
+									</div>
+									<div class="b-doctor-vcard__occupation">Уролог</div>
+									<div class="b-doctor-vcard__text">
+										<div class="b-doctor-vcard__experience">Стаж 5 лет</div>
+										<div class="b-doctor-vcard__address">3-й Сталелетейный проезд, дом 56, кабинет 45</div>
+									</div>
+									<div class="b-doctor-vcard__sign">
+										<button class="b-button b-button_theme-1-S-sign"></button>
+									</div>
+								</div>
+								<div class="i-clearfix"></div>
+							</div>
+							
+							<div class="b-locator__result__item b-doctor-vcard">
+								<div class="b-doctor-vcard__pic">
+									<a href="/doctor/"><img src="/upload/userpic/big.jpg" width="110" height="110" alt="Балашов Алексей Владимирович" class="b-doctor-vcard__pic__img"></a>
+									<div class="b-doctor-vcard__more"><a href="/doctor/" class="b-doctor-vcard__more__link">Подробнее</a></div>
+								</div>
+								<div class="b-doctor-vcard__info">
+									<div class="b-doctor-vcard__name">
+										<a href="/doctor/">Балашов Алексей Владимирович</a>
+									</div>
+									<div class="b-doctor-vcard__occupation">Уролог</div>
+									<div class="b-doctor-vcard__text">
+										<div class="b-doctor-vcard__experience">Стаж 5 лет</div>
+										<div class="b-doctor-vcard__address">3-й Сталелетейный проезд, дом 56, кабинет 45</div>
+									</div>
+									<div class="b-doctor-vcard__sign">
+										<button class="b-button b-button_theme-1-S-sign"></button>
+									</div>
+								</div>
+								<div class="i-clearfix"></div>
+							</div>
+						
+							<div class="b-locator__result__item b-doctor-vcard">
+								<div class="b-doctor-vcard__pic">
+									<a href="/doctor/"><img src="/upload/userpic/big.jpg" width="110" height="110" alt="Балашов Алексей Владимирович" class="b-doctor-vcard__pic__img"></a>
+									<div class="b-doctor-vcard__more"><a href="/doctor/" class="b-doctor-vcard__more__link">Подробнее</a></div>
+								</div>
+								<div class="b-doctor-vcard__info">
+									<div class="b-doctor-vcard__name">
+										<a href="/doctor/">Балашов Алексей Владимирович</a>
+									</div>
+									<div class="b-doctor-vcard__occupation">Уролог</div>
+									<div class="b-doctor-vcard__text">
+										<div class="b-doctor-vcard__experience">Стаж 5 лет</div>
+										<div class="b-doctor-vcard__address">3-й Сталелетейный проезд, дом 56, кабинет 45</div>
+									</div>
+									<div class="b-doctor-vcard__sign">
+										<button class="b-button b-button_theme-1-S-sign"></button>
+									</div>
+								</div>
+								<div class="i-clearfix"></div>
+							</div>
+							
+							<div class="b-locator__result__item b-doctor-vcard">
+								<div class="b-doctor-vcard__pic">
+									<a href="/doctor/"><img src="/upload/userpic/big.jpg" width="110" height="110" alt="Балашов Алексей Владимирович" class="b-doctor-vcard__pic__img"></a>
+									<div class="b-doctor-vcard__more"><a href="/doctor/" class="b-doctor-vcard__more__link">Подробнее</a></div>
+								</div>
+								<div class="b-doctor-vcard__info">
+									<div class="b-doctor-vcard__name">
+										<a href="/doctor/">Балашов Алексей Владимирович</a>
+									</div>
+									<div class="b-doctor-vcard__occupation">Уролог</div>
+									<div class="b-doctor-vcard__text">
+										<div class="b-doctor-vcard__experience">Стаж 5 лет</div>
+										<div class="b-doctor-vcard__address">3-й Сталелетейный проезд, дом 56, кабинет 45</div>
+									</div>
+									<div class="b-doctor-vcard__sign">
+										<button class="b-button b-button_theme-1-S-sign"></button>
+									</div>
+								</div>
+								<div class="i-clearfix"></div>
+							</div>
+						
+							<div class="i-clearfix"></div>
+							
+							<div class="b-get-more"><a href="">Показать еще</a></div>
+							
+						</div>
+					</div>
+					<div class="i-decor-block-shadow"></div>
+				</div>
+				
+			</div>
+			
+			<div class="i-clearfix"></div>
+		</div>
+	</div>
+	
+	<footer class="b-footer">
+	<div class="b-footer_column1">
+			<span class="b-footer_logo" title="Мужское здоровье"></span>
+		</div>
+		<div class="b-footer_column2">
+			<div class="b-footer-copyright">
+				&copy; Российское Научно-Медицинское Общество «Мужское здоровье»
+			</div>
+			<nav class="b-footer-nav">
+				<a href="/" class="b-footer-nav__item">Главная</a>
+				<a href="/" class="b-footer-nav__item">История и миссия</a>
+				<a href="/" class="b-footer-nav__item">Мероприятия</a>
+				<a href="/" class="b-footer-nav__item">Устав</a>
+			</nav>
+		</div>
+		<div class="i-clearfix"></div>
+	</footer>
+	
+</div>
+</body>
+</html>
